@@ -1,7 +1,7 @@
-<!-- resources/views/movies/index.blade.php -->
-@extends('layouts.app')  <!-- Estende il layout 'app' -->
 
-@section('content')  <!-- Sezione 'content' definita nel layout -->
+@extends('layouts.app')
+
+@section('content')
     <div class="container">
         <div class="row">
             @foreach($movies as $movie)

@@ -1,0 +1,72 @@
+
+
+
+$primary-color: #3490dc;
+$secondary-color: #ffed4a;
+$text-color: #333;
+$font-family: 'Arial', sans-serif;
+$card-bg: white;
+$card-border: #e0e0e0;
+$card-shadow: rgba(0, 0, 0, 0.1);
+
+
+@mixin button-styles($bg-color, $color) {
+  background-color: $bg-color;
+  color: $color;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: darken($bg-color, 10%);
+  }
+}
+
+
+body {
+  font-family: $font-family;
+  color: $text-color;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  background-color: $card-bg;
+  border: 1px solid $card-border;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px $card-shadow;
+
+  .card-body {
+    padding: 15px;
+
+    h5 {
+      margin: 0 0 10px;
+      color: $primary-color;
+    }
+
+    p {
+      margin: 0;
+      color: $text-color;
+    }
+  }
+}
+
+.btn-primary {
+  @include button-styles($primary-color, white);
+}
+
+.btn-secondary {
+  @include button-styles($secondary-color, black);
+}
